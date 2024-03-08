@@ -1,7 +1,9 @@
 name: Publish to NPM
 on:
-  release:
-    types: [created]
+  push:
+    branches: ['main']
+    tags: ['v*']
+  workflow_dispatch:
 jobs:
   run:
     runs-on: ubuntu-latest
