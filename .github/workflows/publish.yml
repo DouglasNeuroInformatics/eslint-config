@@ -1,0 +1,28 @@
+name: Publish to NPM
+on:
+  release:
+    types: [created]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: '.nvmrc'
+          registry-url: https://registry.npmjs.org/
+      - name: Lint
+        run: pnpm lint
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Generate Declarations
+        run: pnpm build:lib
+      - name: Publish Package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
