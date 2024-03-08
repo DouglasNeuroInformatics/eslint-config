@@ -1,0 +1,48 @@
+{
+  "name": "@douglasneuroinformatics/eslint-config",
+  "type": "module",
+  "version": "4.0.0",
+  "description": "Linting configurations for DNP projects written in TypeScript/JavaScript",
+  "author": "Joshua Unrau",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "format": "prettier --write src",
+    "lint": "tsc && eslint --fix src",
+    "push": "pnpm lint && npm publish"
+  },
+  "peerDependencies": {
+    "eslint": "8.x",
+    "typescript": "5.x"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "eslint-plugin-jsdoc": "^48.2.0",
+    "eslint-plugin-jsonc": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-perfectionist": "^2.5.0",
+    "eslint-plugin-react": "^7.33.2",
+    "globals": "^14.0.0",
+    "typescript-eslint": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.5",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.11.24",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  }
+}
