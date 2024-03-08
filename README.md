@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://github.com/DouglasNeuroInformatics/ESLintConfig">
+  <a href="https://github.com/DouglasNeuroInformatics/eslint-config">
     <img src="https://raw.githubusercontent.com/DouglasNeuroInformatics/eslint-config/main/.github/assets/eslint-config-logo.png" alt="Logo" width="100" >
   </a>
   <h3 align="center">@douglasneuroinformatics/eslint-config</h3>
@@ -12,8 +12,8 @@
 <!-- PROJECT SHIELDS -->
 <div align="center">
 
-![license](https://img.shields.io/github/license/DouglasNeuroInformatics/ESLintConfig)
-![version](https://img.shields.io/github/package-json/v/DouglasNeuroInformatics/ESLintConfig)
+![license](https://img.shields.io/github/license/DouglasNeuroInformatics/eslint-config)
+![version](https://img.shields.io/github/package-json/v/DouglasNeuroInformatics/eslint-config)
 
 </div>
 <hr />
