@@ -29,7 +29,7 @@ pnpm add -D @douglasneuroinformatics/eslint-config eslint
 **eslint.config.js**
 
 ```javascript
-import { config } from "@joshunrau/eslint-config";
+import { config } from "@douglasneuroinformatics/eslint-config";
 
 export default config();
 ```
