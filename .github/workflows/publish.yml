@@ -18,10 +18,10 @@ jobs:
           cache: 'pnpm'
           node-version-file: '.nvmrc'
           registry-url: https://registry.npmjs.org/
-      - name: Lint
-        run: pnpm lint
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
       - name: Generate Declarations
         run: pnpm build:lib
       - name: Publish Package
