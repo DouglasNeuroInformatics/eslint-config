@@ -22,7 +22,7 @@ export const jsdocConfig = async ({ typescript }) => {
         'jsdoc/empty-tags': 'warn',
         'jsdoc/implements-on-classes': 'warn',
         'jsdoc/multiline-blocks': 'warn',
-        'jsdoc/no-blank-block-descriptions': 'warn',
+        'jsdoc/no-defaults': 'warn',
         'jsdoc/no-multi-asterisks': 'warn',
         'jsdoc/require-jsdoc': 'warn',
         'jsdoc/require-param': 'warn',
@@ -39,7 +39,6 @@ export const jsdocConfig = async ({ typescript }) => {
         'jsdoc/require-returns-type': 'warn',
         'jsdoc/require-yields': 'warn',
         'jsdoc/require-yields-check': 'warn',
-        'jsdoc/sort-tags': 'warn',
         'jsdoc/tag-lines': 'warn',
         'jsdoc/valid-types': 'warn'
       }
@@ -49,10 +48,13 @@ export const jsdocConfig = async ({ typescript }) => {
     configs.push({
       files: ['**/*.ts', '**/*.tsx'],
       rules: {
-        'jsdoc/no-types': 'warn',
-        'jsdoc/require-param-type': 'off',
-        'jsdoc/require-property-type': 'off',
-        'jsdoc/require-returns-type': 'off'
+      'jsdoc/check-tag-names': ['warn', {
+        typed: true
+      }],
+      'jsdoc/no-types': 'warn',
+      'jsdoc/require-param-type': 'off',
+      'jsdoc/require-property-type': 'off',
+      'jsdoc/require-returns-type': 'off'
       }
     });
   }
