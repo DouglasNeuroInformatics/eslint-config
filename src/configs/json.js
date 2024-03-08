@@ -1,11 +1,11 @@
 /**
- * @param {Required<Pick<ESLintConfig.Options, "json">>} options
- * @returns {Promise<ESLintConfig.FlatConfig[]>}
+ * @param {Required<Pick<import('../index.js').Options, "json">>} options
+ * @returns {Promise<import('../index.js').FlatConfig[]>}
  */
 export const jsonConfig = async ({ json }) => {
   const { default: plugin } = await import("eslint-plugin-jsonc");
   const { default: parser } = await import("jsonc-eslint-parser");
-  /** @type {ESLintConfig.FlatConfig[]} */
+  /** @type {import('../index.js').FlatConfig[]} */
   const configs = [];
   if (json.sort.packageJson) {
     configs.push({

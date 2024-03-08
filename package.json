@@ -11,13 +11,15 @@
     "eslintconfig"
   ],
   "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "types": "./lib/index.d.ts",
   "files": [
+    "lib",
     "src"
   ],
   "scripts": {
+    "build:lib": "tsc",
     "format": "prettier --write src",
-    "lint": "tsc && eslint --fix src",
+    "lint": "pnpm exec tsc --noEmit --emitDeclarationOnly false && eslint --fix src",
     "push": "pnpm lint && npm publish"
   },
   "peerDependencies": {

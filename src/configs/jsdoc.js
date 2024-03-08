@@ -1,10 +1,10 @@
 /**
- * @param {Required<Pick<ESLintConfig.Options, "typescript">>} options
- * @returns {Promise<ESLintConfig.FlatConfig[]>}
+ * @param {Required<Pick<import('../index.js').Options, "typescript">>} options
+ * @returns {Promise<import('../index.js').FlatConfig[]>}
  */
 export const jsdocConfig = async ({ typescript }) => {
   const { default: jsdoc } = await import('eslint-plugin-jsdoc');
-  /** @type {ESLintConfig.FlatConfig[]} */
+  /** @type {import('../index.js').FlatConfig[]} */
   const configs = [
     {
       files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.tsx'],
