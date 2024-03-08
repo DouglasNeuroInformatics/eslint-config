@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/DouglasNeuroInformatics/ESLintConfig">
-    <img src=".github/assets/eslint-config-logo.png" alt="Logo" width="100" >
+    <img src="https://raw.githubusercontent.com/DouglasNeuroInformatics/eslint-config/main/.github/assets/eslint-config-logo.png" alt="Logo" width="100" >
   </a>
   <h3 align="center">@douglasneuroinformatics/eslint-config</h3>
   <p align="center">
