@@ -3,7 +3,7 @@
   <a href="https://github.com/DouglasNeuroInformatics/ESLintConfig">
     <img src=".github/assets/eslint-config-logo.png" alt="Logo" width="100" >
   </a>
-  <h3 align="center">DNP ESLint Config</h3>
+  <h3 align="center">eslint-config</h3>
   <p align="center">
     Shared linting configurations for DNP projects written in TypeScript/JavaScript 
   </p>

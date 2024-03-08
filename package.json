@@ -6,6 +6,14 @@
   "description": "Linting configurations for DNP projects written in TypeScript/JavaScript",
   "author": "Joshua Unrau",
   "license": "MIT",
+  "homepage": "https://github.com/DouglasNeuroInformatics/eslint-config/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DouglasNeuroInformatics/eslint-config/.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DouglasNeuroInformatics/eslint-config/issues"
+  },
   "keywords": [
     "eslint",
     "eslintconfig"
