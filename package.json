@@ -27,8 +27,7 @@
   "scripts": {
     "build:lib": "tsc",
     "format": "prettier --write src",
-    "lint": "pnpm exec tsc --noEmit --emitDeclarationOnly false && eslint --fix src",
-    "push": "pnpm lint && npm publish"
+    "lint": "pnpm exec tsc --noEmit --emitDeclarationOnly false && eslint --fix src"
   },
   "peerDependencies": {
     "eslint": "8.x",
