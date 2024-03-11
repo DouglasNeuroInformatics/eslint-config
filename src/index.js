@@ -34,18 +34,22 @@ import { typescriptConfig } from './configs/typescript.js';
 /**
  * Create an array of eslint config objects based on the provided options
  * @param {Options} options
+ * @param {...FlatConfig} args
  * @returns {Promise<FlatConfig[]>}
  */
-export const config = async ({
-  env = { browser: true, es2021: true, node: true },
-  exclude = [],
-  fileRoots = undefined,
-  jsdoc = { enabled: false },
-  json = { enabled: true, sort: { packageJson: true, tsconfig: true } },
-  perfectionist = { enabled: true },
-  react = { enabled: false },
-  typescript = { enabled: true }
-} = {}) => {
+export const config = async (
+  {
+    env = { browser: true, es2021: true, node: true },
+    exclude = [],
+    fileRoots = undefined,
+    jsdoc = { enabled: false },
+    json = { enabled: true, sort: { packageJson: true, tsconfig: true } },
+    perfectionist = { enabled: true },
+    react = { enabled: false },
+    typescript = { enabled: true }
+  } = {},
+  ...args
+) => {
   /** @type {FlatConfig[][]} */
   const items = [];
   items.push(await baseConfig({ env, exclude, fileRoots }));
@@ -64,5 +68,5 @@ export const config = async ({
   if (typescript.enabled) {
     items.push(await typescriptConfig({ fileRoots, react }));
   }
-  return items.flat();
+  return items.flat().concat(...args);
 };
