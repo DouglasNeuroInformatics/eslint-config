@@ -13,6 +13,7 @@ export const typescriptConfig = async ({ fileRoots, react }) => {
         // @ts-ignore
         parser,
         parserOptions: {
+          project: true,
           sourceType: 'module'
         }
       },
