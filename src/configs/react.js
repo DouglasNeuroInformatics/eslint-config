@@ -1,13 +1,17 @@
+import { filesFactory } from '../utils.js';
+
 /**
- * @param {Required<Pick<import('../index.js').Options, "typescript">>} options
+ * @param {Required<Pick<import('../index.js').Options, "typescript">> & { fileRoots?: string[] }} options
  * @returns {Promise<import('../index.js').FlatConfig[]>}
  */
-export const reactConfig = async ({ typescript }) => {
+export const reactConfig = async ({ fileRoots, typescript }) => {
   const { default: jsxA11yPlugin } = await import('eslint-plugin-jsx-a11y');
   const { default: reactPlugin } = await import('eslint-plugin-react');
   return [
     {
-      files: typescript.enabled ? ['**/*.jsx', '**/*.tsx'] : ['**/*.jsx'],
+      files: typescript.enabled
+        ? filesFactory(['**/*.jsx', '**/*.tsx'], fileRoots)
+        : filesFactory(['**/*.jsx'], fileRoots),
       languageOptions: {
         parserOptions: {
           ecmaFeatures: {
@@ -41,7 +45,7 @@ export const reactConfig = async ({ typescript }) => {
       }
     },
     {
-      files: ['**/*.stories.jsx', '**/*.stories.tsx'],
+      files: filesFactory(['**/*.stories.jsx', '**/*.stories.tsx'], fileRoots),
       rules: {
         'no-alert': 'off'
       }

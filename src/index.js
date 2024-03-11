@@ -50,19 +50,19 @@ export const config = async ({
   const items = [];
   items.push(await baseConfig({ env, exclude, fileRoots }));
   if (jsdoc.enabled) {
-    items.push(await jsdocConfig({ typescript }));
+    items.push(await jsdocConfig({ fileRoots, typescript }));
   }
   if (json.enabled) {
-    items.push(await jsonConfig({ json }));
+    items.push(await jsonConfig({ fileRoots, json }));
   }
   if (perfectionist.enabled) {
-    items.push(await perfectionistConfig());
+    items.push(await perfectionistConfig({ fileRoots }));
   }
   if (react.enabled) {
-    items.push(await reactConfig({ typescript }));
+    items.push(await reactConfig({ fileRoots, typescript }));
   }
   if (typescript.enabled) {
-    items.push(await typescriptConfig({ react }));
+    items.push(await typescriptConfig({ fileRoots, react }));
   }
   return items.flat();
 };

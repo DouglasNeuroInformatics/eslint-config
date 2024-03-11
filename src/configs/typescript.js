@@ -1,12 +1,14 @@
+import { filesFactory } from '../utils.js';
+
 /**
- * @param {Required<Pick<import('../index.js').Options, "react">>} options
+ * @param {Required<Pick<import('../index.js').Options, "react">> & { fileRoots?: string[] }} options
  * @returns {Promise<import('../index.js').FlatConfig[]>}
  */
-export const typescriptConfig = async ({ react }) => {
+export const typescriptConfig = async ({ fileRoots, react }) => {
   const { parser, plugin } = await import('typescript-eslint');
   return [
     {
-      files: react.enabled ? ['**/*.ts', '**/*.tsx'] : ['**/*.ts'],
+      files: react.enabled ? filesFactory(['**/*.ts', '**/*.tsx'], fileRoots) : filesFactory(['**/*.ts'], fileRoots),
       languageOptions: {
         // @ts-ignore
         parser,

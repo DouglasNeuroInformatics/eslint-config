@@ -1,7 +1,7 @@
 import { filesFactory } from '../utils.js';
 
 /**
- * @param {Required<Pick<import('../index.js').Options, "env" | "exclude">> & Pick<import('../index.js').Options, "fileRoots">} options
+ * @param {Required<Pick<import('../index.js').Options, "env" | "exclude">> & { fileRoots?: string[] }} options
  * @returns {Promise<import('../index.js').FlatConfig[]>}
  */
 export const baseConfig = async ({ env, exclude, fileRoots }) => {
@@ -28,7 +28,7 @@ export const baseConfig = async ({ env, exclude, fileRoots }) => {
       }
     },
     {
-      files: ['**/*.cjs'],
+      files: filesFactory(['**/*.cjs'], fileRoots),
       languageOptions: {
         globals: {
           ...globals.commonjs,
