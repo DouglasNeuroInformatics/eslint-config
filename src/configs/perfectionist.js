@@ -49,6 +49,7 @@ export const perfectionistConfig = async () => {
               ['index', 'sibling', 'parent'],
               'type',
               'style',
+              ['side-effect', 'side-effect-style'],
               'unknown'
             ],
             'internal-pattern': ['@/**'],
