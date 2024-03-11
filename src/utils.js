@@ -3,7 +3,7 @@ import path from 'path';
 /**
  * Apply roots to files, if applicable
  * @param {string[]} files
- * @param {string[]} roots
+ * @param {string[]} [roots]
  * @returns {string[]}
  */
 export const filesFactory = (files, roots) => {

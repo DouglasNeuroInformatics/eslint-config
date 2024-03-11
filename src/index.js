@@ -39,6 +39,7 @@ import { typescriptConfig } from './configs/typescript.js';
 export const config = async ({
   env = { browser: true, es2021: true, node: true },
   exclude = [],
+  fileRoots = undefined,
   jsdoc = { enabled: false },
   json = { enabled: true, sort: { packageJson: true, tsconfig: true } },
   perfectionist = { enabled: true },
@@ -47,7 +48,7 @@ export const config = async ({
 } = {}) => {
   /** @type {FlatConfig[][]} */
   const items = [];
-  items.push(await baseConfig({ env, exclude }));
+  items.push(await baseConfig({ env, exclude, fileRoots }));
   if (jsdoc.enabled) {
     items.push(await jsdocConfig({ typescript }));
   }
