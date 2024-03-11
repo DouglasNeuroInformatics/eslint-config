@@ -6,6 +6,7 @@ import { reactConfig } from './configs/react.js';
 import { typescriptConfig } from './configs/typescript.js';
 
 /** @typedef {import('eslint').Linter.FlatConfig} FlatConfig */
+/** @typedef {FlatConfig | FlatConfig[] | Promise<FlatConfig> | Promise<FlatConfig[]>} ConfigDef */
 
 /**
  * User configuration options for ESLint
@@ -34,7 +35,7 @@ import { typescriptConfig } from './configs/typescript.js';
 /**
  * Create an array of eslint config objects based on the provided options
  * @param {Options} options
- * @param {...FlatConfig} args
+ * @param {...ConfigDef} args
  * @returns {Promise<FlatConfig[]>}
  */
 export const config = async (
@@ -50,23 +51,24 @@ export const config = async (
   } = {},
   ...args
 ) => {
-  /** @type {FlatConfig[][]} */
+  /** @type {ConfigDef[]} */
   const items = [];
-  items.push(await baseConfig({ env, exclude, fileRoots }));
+  items.push(baseConfig({ env, exclude, fileRoots }));
   if (jsdoc.enabled) {
-    items.push(await jsdocConfig({ fileRoots, typescript }));
+    items.push(jsdocConfig({ fileRoots, typescript }));
   }
   if (json.enabled) {
-    items.push(await jsonConfig({ fileRoots, json }));
+    items.push(jsonConfig({ fileRoots, json }));
   }
   if (perfectionist.enabled) {
-    items.push(await perfectionistConfig({ fileRoots }));
+    items.push(perfectionistConfig({ fileRoots }));
   }
   if (react.enabled) {
-    items.push(await reactConfig({ fileRoots, typescript }));
+    items.push(reactConfig({ fileRoots, typescript }));
   }
   if (typescript.enabled) {
-    items.push(await typescriptConfig({ fileRoots, react }));
+    items.push(typescriptConfig({ fileRoots, react }));
   }
-  return items.flat().concat(...args);
+  items.push(...args);
+  return (await Promise.all(items)).flat();
 };
