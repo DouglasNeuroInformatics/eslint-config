@@ -40,6 +40,7 @@
   "scripts": {
     "build:lib": "tsc",
     "format": "prettier --write src",
+    "prepare": "husky",
     "lint": "pnpm exec tsc --noEmit --emitDeclarationOnly false && eslint --fix src"
   },
   "peerDependencies": {
@@ -77,4 +78,3 @@
     "typescript": "~5.3.3"
   }
 }
-
