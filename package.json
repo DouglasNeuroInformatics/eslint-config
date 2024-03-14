@@ -61,11 +61,17 @@
     "typescript-eslint": "^7.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/types": "^19.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/eslint": "^8.56.5",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.11.24",
     "eslint": "^8.57.0",
+    "husky": "^9.0.11",
     "prettier": "^3.2.5",
+    "semantic-release": "^23.0.2",
     "typescript": "~5.3.3"
   }
 }

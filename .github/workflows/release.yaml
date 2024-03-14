@@ -1,11 +1,21 @@
-name: Publish to NPM
+name: Release
 on:
   push:
-    tags: ['v*']
+    branches: ['main']
   workflow_dispatch:
+permissions:
+  contents: read
+env:
+  HUSKY: 0
 jobs:
-  run:
+  release:
+    name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -16,14 +26,12 @@ jobs:
         with:
           cache: 'pnpm'
           node-version-file: '.nvmrc'
-          registry-url: https://registry.npmjs.org/
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
-      - name: Lint
-        run: pnpm lint
-      - name: Generate Declarations
+      - name: Build
         run: pnpm build:lib
-      - name: Publish Package
-        run: npm publish
+      - name: Create Release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm exec semantic-release
