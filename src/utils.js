@@ -12,3 +12,4 @@ export const filesFactory = (files, roots) => {
   }
   return roots.flatMap((root) => files.map((file) => path.join(root, file)));
 };
+
