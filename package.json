@@ -64,7 +64,9 @@
     "@commitlint/cli": "^19.1.0",
     "@commitlint/config-conventional": "^19.1.0",
     "@commitlint/types": "^19.0.3",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.3",
     "@types/eslint": "^8.56.5",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.11.24",
@@ -75,4 +77,3 @@
     "typescript": "~5.3.3"
   }
 }
-
