@@ -57,7 +57,7 @@ export const typescriptConfig = async ({ fileRoots, react }) => {
         '@typescript-eslint/no-unsafe-assignment': 'error',
         '@typescript-eslint/no-unsafe-call': 'error',
         '@typescript-eslint/no-unsafe-declaration-merging': 'error',
-        '@typescript-eslint/no-unsafe-enum-comparison': 'error',
+        '@typescript-eslint/no-unsafe-enum-comparison': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'error',
         '@typescript-eslint/no-unsafe-return': 'error',
         '@typescript-eslint/no-unused-vars': 'error',
@@ -100,7 +100,6 @@ export const typescriptConfig = async ({ fileRoots, react }) => {
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/no-unsafe-declaration-merging': 'off',
-        '@typescript-eslint/no-unsafe-enum-comparison': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
         '@typescript-eslint/no-unsafe-return': 'off'
       }
