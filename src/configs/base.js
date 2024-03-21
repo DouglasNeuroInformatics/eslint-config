@@ -9,7 +9,7 @@ export const baseConfig = async ({ env, exclude, fileRoots }) => {
   const { default: globals } = await import('globals');
   return [
     {
-      ignores: ['**/build', '**/dist', '**/node_modules', ...exclude]
+      ignores: ['**/.astro/*', '**/build', '**/dist', '**/node_modules', ...exclude]
     },
     {
       files: filesFactory(['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.tsx'], fileRoots),

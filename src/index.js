@@ -1,3 +1,4 @@
+import { astroConfig } from './configs/astro.js';
 import { baseConfig } from './configs/base.js';
 import { jsdocConfig } from './configs/jsdoc.js';
 import { jsonConfig } from './configs/json.js';
@@ -11,6 +12,8 @@ import { typescriptConfig } from './configs/typescript.js';
 /**
  * User configuration options for ESLint
  * @typedef {object} Options
+ * @property {object} [astro]
+ * @property {boolean} [astro.enabled]
  * @property {object} [env]
  * @property {boolean} [env.browser]
  * @property {boolean} [env.es2021]
@@ -40,6 +43,7 @@ import { typescriptConfig } from './configs/typescript.js';
  */
 export const config = async (
   {
+    astro = { enabled: false },
     env = { browser: true, es2021: true, node: true },
     exclude = [],
     fileRoots = undefined,
@@ -54,6 +58,9 @@ export const config = async (
   /** @type {ConfigDef[]} */
   const items = [];
   items.push(baseConfig({ env, exclude, fileRoots }));
+  if (astro.enabled) {
+    items.push(astroConfig({ fileRoots, typescript }));
+  }
   if (jsdoc.enabled) {
     items.push(jsdocConfig({ fileRoots, typescript }));
   }
