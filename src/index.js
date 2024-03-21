@@ -13,7 +13,7 @@ import { typescriptConfig } from './configs/typescript.js';
  * User configuration options for ESLint
  * @typedef {object} Options
  * @property {object} [astro]
- * @property {boolean} [astro.enabled]
+ * @property {boolean} astro.enabled
  * @property {object} [env]
  * @property {boolean} [env.browser]
  * @property {boolean} [env.es2021]
@@ -28,9 +28,10 @@ import { typescriptConfig } from './configs/typescript.js';
  * @property {boolean} json.sort.packageJson
  * @property {boolean} json.sort.tsconfig
  * @property {object} [perfectionist]
- * @property {boolean} [perfectionist.enabled]
+ * @property {boolean} perfectionist.enabled
  * @property {object} [react]
  * @property {boolean} react.enabled
+ * @property {string} [react.version]
  * @property {object} [typescript]
  * @property {boolean} typescript.enabled
  */
@@ -50,7 +51,7 @@ export const config = async (
     jsdoc = { enabled: false },
     json = { enabled: true, sort: { packageJson: true, tsconfig: true } },
     perfectionist = { enabled: true },
-    react = { enabled: false },
+    react = { enabled: false, version: 'detect' },
     typescript = { enabled: true }
   } = {},
   ...args
@@ -71,7 +72,7 @@ export const config = async (
     items.push(perfectionistConfig({ fileRoots }));
   }
   if (react.enabled) {
-    items.push(reactConfig({ fileRoots, typescript }));
+    items.push(reactConfig({ fileRoots, react, typescript }));
   }
   if (typescript.enabled) {
     items.push(typescriptConfig({ fileRoots, react }));

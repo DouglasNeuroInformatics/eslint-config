@@ -1,10 +1,10 @@
 import { filesFactory } from '../utils.js';
 
 /**
- * @param {Required<Pick<import('../index.js').Options, "typescript">> & { fileRoots?: string[] }} options
+ * @param {Required<Pick<import('../index.js').Options, "react" | "typescript">> & { fileRoots?: string[] }} options
  * @returns {Promise<import('../index.js').FlatConfig[]>}
  */
-export const reactConfig = async ({ fileRoots, typescript }) => {
+export const reactConfig = async ({ fileRoots, react, typescript }) => {
   const { default: jsxA11yPlugin } = await import('eslint-plugin-jsx-a11y');
   const { default: reactPlugin } = await import('eslint-plugin-react');
   return [
@@ -40,7 +40,7 @@ export const reactConfig = async ({ fileRoots, typescript }) => {
       },
       settings: {
         react: {
-          version: 'detect'
+          version: react.version
         }
       }
     },
