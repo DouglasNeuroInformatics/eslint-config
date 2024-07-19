@@ -24,8 +24,8 @@ export const reactConfig = async ({ fileRoots, react, typescript }) => {
         react: reactPlugin
       },
       rules: {
-        ...reactPlugin.configs.recommended.rules,
-        ...jsxA11yPlugin.configs.recommended.rules,
+        ...reactPlugin.configs.recommended?.rules,
+        ...jsxA11yPlugin.configs.recommended?.rules,
         'react/function-component-definition': [
           'error',
           {

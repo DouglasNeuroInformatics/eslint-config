@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/DouglasNeuroInformatics/eslint-config">
-    <img src="https://raw.githubusercontent.com/DouglasNeuroInformatics/eslint-config/main/.github/assets/eslint-config-logo.png" alt="Logo" width="100" >
+    <img src="https://raw.githubusercontent.com/DouglasNeuroInformatics/.github/main/assets/img/dnp-utility-logo.png" alt="Logo" width="100" >
   </a>
   <h3 align="center">@douglasneuroinformatics/eslint-config</h3>
   <p align="center">
@@ -29,7 +29,7 @@ pnpm add -D @douglasneuroinformatics/eslint-config eslint
 **eslint.config.js**
 
 ```javascript
-import { config } from "@douglasneuroinformatics/eslint-config";
+import { config } from '@douglasneuroinformatics/eslint-config';
 
 export default config();
 ```
