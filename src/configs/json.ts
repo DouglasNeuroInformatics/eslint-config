@@ -1,14 +1,14 @@
 import { filesFactory } from '../utils.js';
 
-/**
- * @param {Required<Pick<import('../index.js').Options, "json">> & { fileRoots?: string[] }} options
- * @returns {Promise<import('../index.js').FlatConfig[]>}
- */
-export const jsonConfig = async ({ fileRoots, json }) => {
+import type { Config, Options } from '../types.js';
+
+export const jsonConfig = async ({
+  fileRoots,
+  json
+}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'json'>>): Promise<Config[]> => {
   const { default: plugin } = await import('eslint-plugin-jsonc');
   const { default: parser } = await import('jsonc-eslint-parser');
-  /** @type {import('../index.js').FlatConfig[]} */
-  const configs = [];
+  const configs: Config[] = [];
   if (json.sort.packageJson) {
     configs.push({
       files: filesFactory(['**/package.json'], fileRoots),
@@ -16,7 +16,7 @@ export const jsonConfig = async ({ fileRoots, json }) => {
         parser
       },
       plugins: {
-        // @ts-ignore
+        // @ts-expect-error - not updated for eslint v9
         jsonc: plugin
       },
       rules: {

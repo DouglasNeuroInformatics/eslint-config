@@ -1,15 +1,17 @@
 import { filesFactory } from '../utils.js';
 
-/**
- * @param {Required<Pick<import('../index.js').Options, "env" | "exclude">> & { fileRoots?: string[] }} options
- * @returns {Promise<import('../index.js').FlatConfig[]>}
- */
-export const baseConfig = async ({ env, exclude, fileRoots }) => {
+import type { Config, Options } from '../types.js';
+
+export const baseConfig = async ({
+  env,
+  exclude,
+  fileRoots
+}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'env' | 'exclude'>>): Promise<Config[]> => {
   const { default: js } = await import('@eslint/js');
   const { default: globals } = await import('globals');
   return [
     {
-      ignores: ['**/.astro/*', '**/build', '**/dist', '**/node_modules', ...exclude]
+      ignores: ['**/.astro/*', '**/build', '**/dist', '**/node_modules', '**/.svelte-kit', ...exclude]
     },
     {
       files: filesFactory(['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.tsx'], fileRoots),
@@ -24,8 +26,7 @@ export const baseConfig = async ({ env, exclude, fileRoots }) => {
       },
       rules: {
         ...js.configs.recommended.rules,
-        'no-alert': 'error',
-        'no-console': ['error', { allow: ['warn', 'error'] }]
+        'no-alert': 'error'
       }
     },
     {

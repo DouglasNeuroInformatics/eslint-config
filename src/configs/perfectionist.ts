@@ -1,10 +1,8 @@
 import { filesFactory } from '../utils.js';
 
-/**
- * @param {Pick<import('../index.js').Options, "fileRoots">} options
- * @returns {Promise<import('../index.js').FlatConfig[]>}
- */
-export const perfectionistConfig = async ({ fileRoots }) => {
+import type { Config, Options } from '../types.js';
+
+export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoots'>): Promise<Config[]> => {
   const { default: perfectionistPlugin } = await import('eslint-plugin-perfectionist');
   return [
     {
@@ -37,7 +35,7 @@ export const perfectionistConfig = async ({ fileRoots }) => {
         'perfectionist/sort-imports': [
           'error',
           {
-            'custom-groups': {
+            customGroups: {
               type: {
                 react: ['react', 'react-dom/*']
               },
@@ -56,15 +54,15 @@ export const perfectionistConfig = async ({ fileRoots }) => {
               ['side-effect', 'side-effect-style'],
               'unknown'
             ],
-            'internal-pattern': ['@/**'],
-            'newlines-between': 'always',
+            internalPattern: ['@/**'],
+            newlinesBetween: 'always',
             type: 'natural'
           }
         ],
         'perfectionist/sort-jsx-props': [
           'error',
           {
-            'custom-groups': {
+            customGroups: {
               callback: 'on*'
             },
             groups: ['shorthand', 'unknown', 'callback'],

@@ -20,28 +20,28 @@
   ],
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
-      "import": "./src/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./configs/*": {
-      "types": "./lib/configs/*.d.ts",
-      "default": "./src/configs/*.js"
+      "types": "./dist/configs/*.d.ts",
+      "default": "./dist/configs/*.js"
     }
   },
-  "main": "./src/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "lib",
-    "src"
+    "dist"
   ],
   "scripts": {
-    "build:lib": "tsc",
+    "build": "tsc",
     "format": "prettier --write src",
     "prepare": "husky",
-    "lint": "pnpm exec tsc --noEmit --emitDeclarationOnly false && eslint --fix src"
+    "lint": "pnpm build && eslint --fix src",
+    "test": "vitest --run"
   },
   "peerDependencies": {
-    "eslint": "8.x",
+    "eslint": "9.x",
     "typescript": "5.x"
   },
   "peerDependenciesMeta": {
@@ -50,29 +50,30 @@
     }
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^7.5.0",
-    "eslint-plugin-astro": "^0.33.1",
-    "eslint-plugin-jsdoc": "^48.2.3",
-    "eslint-plugin-jsonc": "^2.15.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-perfectionist": "^2.8.0",
-    "eslint-plugin-react": "^7.34.1",
-    "globals": "^15.0.0",
-    "typescript-eslint": "^7.5.0"
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-jsdoc": "^50.2.2",
+    "eslint-plugin-jsonc": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-perfectionist": "^3.2.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-svelte": "^2.43.0",
+    "globals": "^15.9.0",
+    "typescript-eslint": "^8.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
+    "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@douglasneuroinformatics/prettier-config": "^0.0.1",
     "@douglasneuroinformatics/semantic-release": "^0.0.1",
     "@douglasneuroinformatics/tsconfig": "^1.0.1",
-    "@types/eslint": "^8.56.7",
+    "@types/eslint": "^9.6.0",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.12.4",
-    "eslint": "^8.57.0",
-    "husky": "^9.0.11",
-    "prettier": "^3.2.5",
-    "typescript": "~5.4.4"
+    "eslint": "^9.9.0",
+    "husky": "^9.1.4",
+    "prettier": "^3.3.3",
+    "typescript": "~5.5.4",
+    "vitest": "^2.0.5"
   },
   "commitlint": {
     "extends": [
@@ -84,5 +85,12 @@
     "extends": [
       "@douglasneuroinformatics/semantic-release"
     ]
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint": "9.x"
+      }
+    }
   }
 }

@@ -1,13 +1,13 @@
 import { filesFactory } from '../utils.js';
 
-/**
- * @param {Required<Pick<import('../index.js').Options, "typescript">> & { fileRoots?: string[] }} options
- * @returns {Promise<import('../index.js').FlatConfig[]>}
- */
-export const jsdocConfig = async ({ fileRoots, typescript }) => {
+import type { Config, Options } from '../types.js';
+
+export const jsdocConfig = async ({
+  fileRoots,
+  typescript
+}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'typescript'>>): Promise<Config[]> => {
   const { default: jsdoc } = await import('eslint-plugin-jsdoc');
-  /** @type {import('../index.js').FlatConfig[]} */
-  const configs = [
+  const configs: Config[] = [
     {
       files: filesFactory(['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.tsx'], fileRoots),
       plugins: {
