@@ -20,13 +20,6 @@ export const jsonConfig = async ({ fileRoots, json }) => {
         jsonc: plugin
       },
       rules: {
-        'jsonc/sort-array-values': [
-          'warn',
-          {
-            order: { type: 'asc' },
-            pathPattern: '^files$'
-          }
-        ],
         'jsonc/sort-keys': [
           'warn',
           {
