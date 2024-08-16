@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.0.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v4.3.1...v5.0.0) (2024-08-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for eslint v8
+* adjust typescript linting rules for v8 of typescript-eslint
+
+### Features
+
+* support eslint v9 ([dbcdb01](https://github.com/DouglasNeuroInformatics/eslint-config/commit/dbcdb01fbae10e231aa980f183be3273e688e2bf))
+
 ## [4.3.1](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v4.3.0...v4.3.1) (2024-08-16)
 
 
