@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.1](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v4.3.0...v4.3.1) (2024-08-16)
+
+
+### Bug Fixes
+
+* remove sort array values rule for json ([f6d9eff](https://github.com/DouglasNeuroInformatics/eslint-config/commit/f6d9eff3f471b909e89724f84e3486996c39b563))
+
 ## [4.3.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v4.2.1...v4.3.0) (2024-07-19)
 
 ### Features
