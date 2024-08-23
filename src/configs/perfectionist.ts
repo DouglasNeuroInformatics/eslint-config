@@ -37,13 +37,16 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
           {
             customGroups: {
               type: {
-                react: ['react', 'react-dom/*']
+                react: ['react', 'react-dom/*'],
+                runtime: '/**'
               },
               value: {
-                react: ['react', 'react-dom/*']
+                react: ['react', 'react-dom/*'],
+                runtime: '/**'
               }
             },
             groups: [
+              'runtime',
               'react',
               ['builtin', 'builtin-type'],
               ['external', 'external-type'],
