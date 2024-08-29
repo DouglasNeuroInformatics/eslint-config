@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.0.0...v5.1.0) (2024-08-23)
+
+
+### Features
+
+* add runtime group to sort-imports ([1c5a47b](https://github.com/DouglasNeuroInformatics/eslint-config/commit/1c5a47b5d64f42749245b8f742cf7f3528a1334f))
+
 ## [5.0.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v4.3.1...v5.0.0) (2024-08-16)
 
 
