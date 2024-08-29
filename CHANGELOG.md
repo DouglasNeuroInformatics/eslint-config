@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.1](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.0...v5.1.1) (2024-08-29)
+
+
+### Bug Fixes
+
+* exclude css from runtime custom group ([ec02b03](https://github.com/DouglasNeuroInformatics/eslint-config/commit/ec02b031d8d6dfd9c025f022040e89e704133a34))
+
 ## [5.1.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.0.0...v5.1.0) (2024-08-23)
 
 
