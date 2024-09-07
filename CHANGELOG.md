@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.3](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.2...v5.1.3) (2024-09-07)
+
+
+### Bug Fixes
+
+* support .cts and .mts ([ee4cd12](https://github.com/DouglasNeuroInformatics/eslint-config/commit/ee4cd129d672a703d9e2e0806a3c07cd26c47f8e))
+
 ## [5.1.2](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.1...v5.1.2) (2024-09-05)
 
 
