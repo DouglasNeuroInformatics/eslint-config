@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.2](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.1...v5.1.2) (2024-09-05)
+
+
+### Bug Fixes
+
+* adjust typescript rules ([0f0b68b](https://github.com/DouglasNeuroInformatics/eslint-config/commit/0f0b68bfbb627d704a1d0d705b650bb1f5d83070))
+
 ## [5.1.1](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.0...v5.1.1) (2024-08-29)
 
 
