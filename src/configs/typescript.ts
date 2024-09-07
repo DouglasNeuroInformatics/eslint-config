@@ -8,7 +8,7 @@ export const typescriptConfig = async ({
   svelte
 }: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'react' | 'svelte'>>): Promise<Config[]> => {
   const { parser, plugin } = await import('typescript-eslint');
-  const extensions = ['.ts'];
+  const extensions = ['.ts', '.cts', '.mts'];
   if (react.enabled) {
     extensions.push('.tsx');
   }
