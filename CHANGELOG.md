@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.4](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.3...v5.1.4) (2024-09-07)
+
+
+### Bug Fixes
+
+* allow require as import ([98a1598](https://github.com/DouglasNeuroInformatics/eslint-config/commit/98a1598eb2473507354a613158f653a57f092e90))
+
 ## [5.1.3](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.2...v5.1.3) (2024-09-07)
 
 
