@@ -95,12 +95,23 @@ export const jsonConfig = async ({
   if (json.sort.tsconfig) {
     configs.push({
       files: filesFactory(['**/jsconfig.json', '**/tsconfig.json', '**/tsconfig.*.json'], fileRoots),
+      languageOptions: {
+        parser
+      },
+      plugins: {
+        // @ts-expect-error - not updated for eslint v9
+        jsonc: plugin
+      },
       rules: {
         'jsonc/sort-keys': [
           'warn',
           {
             order: ['extends', 'compilerOptions', 'references', 'files', 'include', 'exclude'],
             pathPattern: '^$'
+          },
+          {
+            order: { type: 'asc' },
+            pathPattern: '^compilerOptions$'
           }
         ]
       }
