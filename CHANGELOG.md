@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.5](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.4...v5.1.5) (2024-09-08)
+
+
+### Bug Fixes
+
+* sort scripts in package.json ([6fff169](https://github.com/DouglasNeuroInformatics/eslint-config/commit/6fff169cdd69bd6a15aff1c44f1f8f671dc9333e))
+
 ## [5.1.4](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.3...v5.1.4) (2024-09-07)
 
 
