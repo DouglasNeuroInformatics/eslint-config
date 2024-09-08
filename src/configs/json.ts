@@ -79,6 +79,10 @@ export const jsonConfig = async ({
             pathPattern: '^(?:resolutions|overrides|pnpm.overrides)$'
           },
           {
+            order: { type: 'asc' },
+            pathPattern: '^scripts$'
+          },
+          {
             order: ['types', 'import', 'require', 'default'],
             pathPattern: '^exports.*$'
           }
