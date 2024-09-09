@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.7](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.6...v5.1.7) (2024-09-09)
+
+
+### Bug Fixes
+
+* add exports to sort ([556da93](https://github.com/DouglasNeuroInformatics/eslint-config/commit/556da93e23835cfbcb5e5d6a6ca7882e0374212f))
+
 ## [5.1.6](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.5...v5.1.6) (2024-09-08)
 
 
