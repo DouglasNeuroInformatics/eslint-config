@@ -36,8 +36,8 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write src",
-    "prepare": "husky",
     "lint": "pnpm build && eslint --fix src",
+    "prepare": "husky",
     "test": "vitest --run"
   },
   "peerDependencies": {

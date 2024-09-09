@@ -83,6 +83,10 @@ export const jsonConfig = async ({
             pathPattern: '^scripts$'
           },
           {
+            order: { type: 'asc' },
+            pathPattern: '^exports$'
+          },
+          {
             order: ['types', 'import', 'require', 'default'],
             pathPattern: '^exports.*$'
           }
