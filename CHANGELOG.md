@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.6](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.5...v5.1.6) (2024-09-08)
+
+
+### Bug Fixes
+
+* tsconfig sort ([c6b5201](https://github.com/DouglasNeuroInformatics/eslint-config/commit/c6b52013a27d24fd429d85f7e82c3f9b895e591f))
+
 ## [5.1.5](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.4...v5.1.5) (2024-09-08)
 
 
