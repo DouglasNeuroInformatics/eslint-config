@@ -34,6 +34,7 @@ export type Options = {
   };
   typescript?: {
     enabled: boolean;
+    project?: string;
   };
 };
 

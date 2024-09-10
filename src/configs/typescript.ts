@@ -5,8 +5,9 @@ import type { Config, Options } from '../types.js';
 export const typescriptConfig = async ({
   fileRoots,
   react,
-  svelte
-}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'react' | 'svelte'>>): Promise<Config[]> => {
+  svelte,
+  typescript
+}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'react' | 'svelte' | 'typescript'>>): Promise<Config[]> => {
   const { parser, plugin } = await import('typescript-eslint');
   const extensions = ['.ts', '.cts', '.mts'];
   if (react.enabled) {
@@ -22,7 +23,7 @@ export const typescriptConfig = async ({
         // @ts-expect-error - ironic lol
         parser,
         parserOptions: {
-          projectService: true,
+          project: typescript.project ?? true,
           sourceType: 'module'
         }
       },
