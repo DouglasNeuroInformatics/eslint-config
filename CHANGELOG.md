@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.8](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.7...v5.1.8) (2024-09-10)
+
+
+### Bug Fixes
+
+* add project option to typescript ([efb851e](https://github.com/DouglasNeuroInformatics/eslint-config/commit/efb851e55e54c7d5bcec4f1153267dd491fa9e6a))
+
 ## [5.1.7](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.6...v5.1.7) (2024-09-09)
 
 
