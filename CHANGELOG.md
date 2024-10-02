@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.9](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.8...v5.1.9) (2024-10-02)
+
+
+### Bug Fixes
+
+* ban console.log ([19fb22f](https://github.com/DouglasNeuroInformatics/eslint-config/commit/19fb22f3244daf6caa9c50eacc4811310b0260d1))
+
 ## [5.1.8](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.7...v5.1.8) (2024-09-10)
 
 
