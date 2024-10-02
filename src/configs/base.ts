@@ -26,7 +26,8 @@ export const baseConfig = async ({
       },
       rules: {
         ...js.configs.recommended.rules,
-        'no-alert': 'error'
+        'no-alert': 'error',
+        'no-console': ['error', { allow: ['warn', 'error'] }]
       }
     },
     {
