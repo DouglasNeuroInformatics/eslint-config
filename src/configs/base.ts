@@ -26,6 +26,24 @@ export const baseConfig = async ({
       },
       rules: {
         ...js.configs.recommended.rules,
+        'max-depth': [
+          'warn',
+          {
+            max: 4
+          }
+        ],
+        'max-lines': [
+          'warn',
+          {
+            max: 500
+          }
+        ],
+        'max-lines-per-function': [
+          'warn',
+          {
+            max: 100
+          }
+        ],
         'no-alert': 'error',
         'no-console': ['error', { allow: ['warn', 'error'] }]
       }
