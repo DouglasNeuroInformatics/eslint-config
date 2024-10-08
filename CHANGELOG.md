@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.9...v5.2.0) (2024-10-08)
+
+
+### Features
+
+* ban huge functions and deep nesting ([e4fea0c](https://github.com/DouglasNeuroInformatics/eslint-config/commit/e4fea0cc6fec3de946109c8c8f0699743def3385))
+
 ## [5.1.9](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.8...v5.1.9) (2024-10-02)
 
 
