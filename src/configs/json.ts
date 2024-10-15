@@ -2,6 +2,7 @@ import { filesFactory } from '../utils.js';
 
 import type { Config, Options } from '../types.js';
 
+// eslint-disable-next-line max-lines-per-function
 export const jsonConfig = async ({
   fileRoots,
   json

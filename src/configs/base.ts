@@ -41,11 +41,18 @@ export const baseConfig = async ({
         'max-lines-per-function': [
           'warn',
           {
-            max: 100
+            max: 120
           }
         ],
         'no-alert': 'error',
         'no-console': ['error', { allow: ['warn', 'error'] }]
+      }
+    },
+    {
+      files: filesFactory(['**/*.test.*', '**/*.spec.*']),
+      rules: {
+        'max-lines': 'off',
+        'max-lines-per-function': 'off'
       }
     },
     {
