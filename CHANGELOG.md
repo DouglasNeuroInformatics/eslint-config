@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.2](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.1...v5.2.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* add prefer const no var ([e7fd4ff](https://github.com/DouglasNeuroInformatics/eslint-config/commit/e7fd4ff2bf84ce8441a978112c4795e0ce1bfff0))
+
 ## [5.2.1](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.0...v5.2.1) (2024-10-15)
 
 
