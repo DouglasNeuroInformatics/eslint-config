@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.1](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.0...v5.2.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* disable max-lines for test files ([ac3c035](https://github.com/DouglasNeuroInformatics/eslint-config/commit/ac3c035c646073deac6e7c0efded39daba42ec88))
+
 ## [5.2.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.1.9...v5.2.0) (2024-10-08)
 
 
