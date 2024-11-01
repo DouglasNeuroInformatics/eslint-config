@@ -62,6 +62,19 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
             type: 'natural'
           }
         ],
+        'perfectionist/sort-intersection-types': [
+          'error',
+          {
+            groups: ['named', 'unknown'],
+            ignoreCase: true,
+            matcher: 'minimatch',
+            order: 'asc',
+            partitionByComment: false,
+            partitionByNewLine: false,
+            specialCharacters: 'keep',
+            type: 'alphabetical'
+          }
+        ],
         'perfectionist/sort-jsx-props': [
           'error',
           {
