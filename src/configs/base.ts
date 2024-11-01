@@ -27,34 +27,15 @@ export const baseConfig = async ({
       rules: {
         ...js.configs.recommended.rules,
         'max-depth': [
-          'warn',
+          'error',
           {
             max: 4
-          }
-        ],
-        'max-lines': [
-          'warn',
-          {
-            max: 500
-          }
-        ],
-        'max-lines-per-function': [
-          'warn',
-          {
-            max: 120
           }
         ],
         'no-alert': 'error',
         'no-console': ['error', { allow: ['warn', 'error'] }],
         'no-var': 'error',
         'prefer-const': 'error'
-      }
-    },
-    {
-      files: filesFactory(['**/*.test.*', '**/*.spec.*']),
-      rules: {
-        'max-lines': 'off',
-        'max-lines-per-function': 'off'
       }
     },
     {
