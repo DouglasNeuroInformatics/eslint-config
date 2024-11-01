@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.2.3](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.2...v5.2.3) (2024-11-01)
+
+
+### Bug Fixes
+
+* remove max-lines and max-lines-per-function ([4cd95a3](https://github.com/DouglasNeuroInformatics/eslint-config/commit/4cd95a36d258a693313c96269d77d667158d0567))
+* sort-intersection-types ([332c581](https://github.com/DouglasNeuroInformatics/eslint-config/commit/332c5813f32c2ac8961155e730f675789b89eb5a))
+
 ## [5.2.2](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.1...v5.2.2) (2024-10-17)
 
 
