@@ -1,6 +1,7 @@
 {
   "extends": ["@douglasneuroinformatics/tsconfig"],
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "declaration": true,
     "noEmit": false,
     "outDir": "dist"
