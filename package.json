@@ -50,30 +50,30 @@
     }
   },
   "dependencies": {
-    "eslint-plugin-astro": "^1.2.3",
-    "eslint-plugin-jsdoc": "^50.2.2",
-    "eslint-plugin-jsonc": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-perfectionist": "^3.2.0",
-    "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-svelte": "^2.43.0",
-    "globals": "^15.9.0",
-    "typescript-eslint": "^8.1.0"
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-jsdoc": "^50.6.1",
+    "eslint-plugin-jsonc": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-perfectionist": "^4.2.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-svelte": "^2.46.1",
+    "globals": "^15.13.0",
+    "typescript-eslint": "^8.18.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.4.0",
-    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@douglasneuroinformatics/prettier-config": "^0.0.1",
     "@douglasneuroinformatics/semantic-release": "^0.0.1",
-    "@douglasneuroinformatics/tsconfig": "^1.0.1",
-    "@types/eslint": "^9.6.0",
+    "@douglasneuroinformatics/tsconfig": "^1.0.2",
+    "@types/eslint": "^9.6.1",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.12.4",
-    "eslint": "^9.9.0",
-    "husky": "^9.1.4",
-    "prettier": "^3.3.3",
+    "@types/node": "22.x",
+    "eslint": "^9.16.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
     "typescript": "~5.5.4",
-    "vitest": "^2.0.5"
+    "vitest": "^2.1.8"
   },
   "commitlint": {
     "extends": [
