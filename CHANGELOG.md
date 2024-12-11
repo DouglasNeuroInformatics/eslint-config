@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.4](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.3...v5.2.4) (2024-12-11)
+
+
+### Bug Fixes
+
+* perfectionist ([9d80693](https://github.com/DouglasNeuroInformatics/eslint-config/commit/9d8069384d110369370f7fe589b991a72d7eb2ad))
+
 ## [5.2.3](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.2...v5.2.3) (2024-11-01)
 
 
