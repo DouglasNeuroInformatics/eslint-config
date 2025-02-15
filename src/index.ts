@@ -1,5 +1,6 @@
 import { astroConfig } from './configs/astro.js';
 import { baseConfig } from './configs/base.js';
+import { importConfig } from './configs/import.js';
 import { jsdocConfig } from './configs/jsdoc.js';
 import { jsonConfig } from './configs/json.js';
 import { perfectionistConfig } from './configs/perfectionist.js';
@@ -26,7 +27,7 @@ export const config = async (
   ...args: ConfigDef[]
 ): Promise<Config[]> => {
   const items: ConfigDef[] = [];
-  items.push(baseConfig({ env, exclude, fileRoots }));
+  items.push(baseConfig({ env, exclude, fileRoots }), importConfig({ fileRoots }));
   if (astro.enabled) {
     items.push(astroConfig({ fileRoots }));
   }

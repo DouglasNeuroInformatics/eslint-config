@@ -34,6 +34,7 @@ export const baseConfig = async ({
         ],
         'no-alert': 'error',
         'no-console': ['error', { allow: ['warn', 'error'] }],
+        'no-duplicate-imports': 'error',
         'no-var': 'error',
         'prefer-const': 'error'
       }
