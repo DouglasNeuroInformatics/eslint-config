@@ -12,7 +12,8 @@ export const importConfig = async ({ fileRoots }: Pick<Options, 'fileRoots'>): P
       },
       rules: {
         'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
-        'import/exports-last': 'error'
+        'import/exports-last': 'error',
+        'import/no-duplicates': 'error'
       }
     }
   ];
