@@ -34,6 +34,9 @@ importers:
       globals:
         specifier: ^15.15.0
         version: 15.15.0
+      jsonc-eslint-parser:
+        specifier: ^2.4.0
+        version: 2.4.0
       typescript-eslint:
         specifier: ^8.24.0
         version: 8.24.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.6.3)
