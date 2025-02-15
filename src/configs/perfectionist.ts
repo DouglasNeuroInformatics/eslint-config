@@ -11,7 +11,7 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
         perfectionist: perfectionistPlugin
       },
       rules: {
-        ...perfectionistPlugin.configs['recommended-natural'].rules,
+        'perfectionist/sort-array-includes': ['error', { order: 'asc', type: 'natural' }],
         'perfectionist/sort-classes': [
           'error',
           {
@@ -32,6 +32,10 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
             type: 'natural'
           }
         ],
+        'perfectionist/sort-decorators': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-enums': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-exports': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-heritage-clauses': ['error', { order: 'asc', type: 'natural' }],
         'perfectionist/sort-imports': [
           'error',
           {
@@ -62,6 +66,7 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
             type: 'natural'
           }
         ],
+        'perfectionist/sort-interfaces': ['error', { order: 'asc', type: 'natural' }],
         'perfectionist/sort-intersection-types': [
           'error',
           {
@@ -84,7 +89,16 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
             order: 'asc',
             type: 'natural'
           }
-        ]
+        ],
+        'perfectionist/sort-maps': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-named-exports': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-named-imports': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-object-types': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-objects': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-sets': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-switch-case': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-union-types': ['error', { order: 'asc', type: 'natural' }],
+        'perfectionist/sort-variable-declarations': ['error', { order: 'asc', type: 'natural' }]
       }
     }
   ];
