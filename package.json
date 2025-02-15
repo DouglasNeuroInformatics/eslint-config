@@ -2,7 +2,7 @@
   "name": "@douglasneuroinformatics/eslint-config",
   "type": "module",
   "version": "5.2.4",
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@10.4.0",
   "description": "Linting configurations for DNP projects written in TypeScript/JavaScript",
   "author": "Joshua Unrau",
   "license": "Apache-2.0",
@@ -42,7 +42,7 @@
   },
   "peerDependencies": {
     "eslint": "9.x",
-    "typescript": "5.x"
+    "typescript": "5.6.x"
   },
   "peerDependenciesMeta": {
     "typescript": {
@@ -55,25 +55,25 @@
     "eslint-plugin-jsdoc": "^50.6.3",
     "eslint-plugin-jsonc": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-perfectionist": "3.x",
+    "eslint-plugin-perfectionist": "^4.9.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-svelte": "^2.46.1",
-    "globals": "^15.14.0",
+    "globals": "^15.15.0",
     "typescript-eslint": "^8.24.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
-    "@douglasneuroinformatics/prettier-config": "^0.0.1",
-    "@douglasneuroinformatics/semantic-release": "^0.0.1",
+    "@douglasneuroinformatics/prettier-config": "^0.0.2",
+    "@douglasneuroinformatics/semantic-release": "^0.2.1",
     "@douglasneuroinformatics/tsconfig": "^1.0.2",
     "@types/eslint": "^9.6.1",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "22.x",
     "eslint": "^9.20.1",
     "husky": "^9.1.7",
-    "prettier": "^3.5.0",
-    "typescript": "~5.5.4",
+    "prettier": "^3.5.1",
+    "typescript": "5.6.x",
     "vitest": "^3.0.5"
   },
   "commitlint": {

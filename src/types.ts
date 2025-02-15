@@ -1,5 +1,11 @@
 import { Linter } from 'eslint';
 
+export type Config = Linter.Config;
+
+export type ConfigDef = Config | Config[] | Promise<Config> | Promise<Config[]>;
+
+export type ConfigFiles = NonNullable<Config['files']>;
+
 /** User configuration options for ESLint */
 export type Options = {
   astro?: {
@@ -37,9 +43,3 @@ export type Options = {
     project?: string;
   };
 };
-
-export type Config = Linter.Config;
-
-export type ConfigDef = Config | Config[] | Promise<Config> | Promise<Config[]>;
-
-export type ConfigFiles = NonNullable<Config['files']>;

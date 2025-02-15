@@ -37,12 +37,12 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
           {
             customGroups: {
               type: {
-                react: ['react', 'react-dom/*'],
-                runtime: '/**/!(*.css)'
+                react: ['^react$', '^react-dom/.+'],
+                runtime: '^/+.$' //'^(?!.*.css$).+$'
               },
               value: {
-                react: ['react', 'react-dom/*'],
-                runtime: '/**/!(*.css)'
+                react: ['^react$', '^react-dom/.+'],
+                runtime: '^/+.$' // '/**/!(*.css)'
               }
             },
             groups: [
@@ -57,7 +57,7 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
               ['side-effect', 'side-effect-style'],
               'unknown'
             ],
-            internalPattern: ['@/**'],
+            internalPattern: ['^@/.+'],
             newlinesBetween: 'always',
             type: 'natural'
           }
@@ -67,7 +67,6 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
           {
             groups: ['named', 'unknown'],
             ignoreCase: true,
-            matcher: 'minimatch',
             order: 'asc',
             partitionByComment: false,
             partitionByNewLine: false,
@@ -79,7 +78,7 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
           'error',
           {
             customGroups: {
-              callback: 'on*'
+              callback: '^on.+'
             },
             groups: ['shorthand', 'unknown', 'callback'],
             order: 'asc',
