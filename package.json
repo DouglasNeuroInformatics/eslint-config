@@ -78,7 +78,7 @@
   },
   "commitlint": {
     "extends": [
-      "@commitlint/config-conventional"
+      "@douglasneuroinformatics/semantic-release/commitlint-config"
     ]
   },
   "prettier": "@douglasneuroinformatics/prettier-config",
