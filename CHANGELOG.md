@@ -1,5 +1,19 @@
 # Changelog
 
+## [5.3.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.4...v5.3.0) (2025-02-15)
+
+### Features
+
+* add new import rules ([bda41ad](https://github.com/DouglasNeuroInformatics/eslint-config/commit/bda41ad00a3fb2df9cbea339f7001a2d2dffc4da))
+
+### Bug Fixes
+
+* add @eslint/js ([dd6fc1a](https://github.com/DouglasNeuroInformatics/eslint-config/commit/dd6fc1a73b200837889702dcdbcaf15b230e3e85))
+* add jsonc-eslint-parser ([cb5e9ed](https://github.com/DouglasNeuroInformatics/eslint-config/commit/cb5e9ed42a7812aa78bbbfd893b420bab4480cc8))
+* custom runtime group ([6be5c86](https://github.com/DouglasNeuroInformatics/eslint-config/commit/6be5c86e5c78392c777141ddab1ac43dcfb37273))
+* import no duplicates ([6e3a10a](https://github.com/DouglasNeuroInformatics/eslint-config/commit/6e3a10ae45b585764b480cceee6db7ea606b7a2f))
+* update perfectionist to v4 ([e992116](https://github.com/DouglasNeuroInformatics/eslint-config/commit/e99211613ba9207883d644e730898db70bd9e705))
+
 ## [5.2.4](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.2.3...v5.2.4) (2024-12-11)
 
 
