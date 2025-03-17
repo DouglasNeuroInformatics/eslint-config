@@ -40,6 +40,7 @@ export type Options = {
   };
   typescript?: {
     enabled: boolean;
+    explicitReturnTypes?: boolean;
     project?: string;
   };
 };

@@ -42,6 +42,7 @@ export const typescriptConfig = async ({
         '@typescript-eslint/consistent-type-assertions': 'error',
         '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
         '@typescript-eslint/dot-notation': 'error',
+        '@typescript-eslint/explicit-function-return-type': typescript.explicitReturnTypes ? 'error' : 'off',
         '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-array-delete': 'error',
         '@typescript-eslint/no-base-to-string': 'error',
@@ -139,6 +140,7 @@ export const typescriptConfig = async ({
     {
       files: filesFactory(testFiles, fileRoots),
       rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-unsafe-argument': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-unsafe-call': 'off',
