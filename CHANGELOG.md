@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.3.2](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.1...v5.3.2) (2025-03-17)
+
+### Bug Fixes
+
+* add explicitReturnTypes option ([a28cbda](https://github.com/DouglasNeuroInformatics/eslint-config/commit/a28cbda224b85569986ee2102bc1343ceceeaf62))
+
 ## [5.3.1](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.0...v5.3.1) (2025-02-15)
 
 ### Bug Fixes
