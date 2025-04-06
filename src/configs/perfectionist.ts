@@ -61,7 +61,7 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
               ['side-effect', 'side-effect-style'],
               'unknown'
             ],
-            internalPattern: ['^@/.+'],
+            internalPattern: ['^@/.+', '^#.+'],
             newlinesBetween: 'always',
             type: 'natural'
           }
