@@ -34,7 +34,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -b tsconfig.build.json",
     "format": "prettier --write src",
     "lint": "pnpm build && eslint --fix src",
     "prepare": "husky",
