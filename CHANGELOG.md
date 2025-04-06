@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.3.3](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.2...v5.3.3) (2025-04-06)
+
+### Bug Fixes
+
+* add subpath imports to internal pattern ([45bb62a](https://github.com/DouglasNeuroInformatics/eslint-config/commit/45bb62aad1b7aad1076b979808f9def3d470eade))
+
 ## [5.3.2](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.1...v5.3.2) (2025-03-17)
 
 ### Bug Fixes
