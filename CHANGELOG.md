@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.3.4](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.3...v5.3.4) (2025-05-09)
+
+### Bug Fixes
+
+* update dependencies ([a28f5f8](https://github.com/DouglasNeuroInformatics/eslint-config/commit/a28f5f89a580a7e962cf4c7a6ebccca3b614e39a))
+
 ## [5.3.3](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.2...v5.3.3) (2025-04-06)
 
 ### Bug Fixes
