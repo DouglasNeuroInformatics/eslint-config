@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.3.5](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.4...v5.3.5) (2025-07-11)
+
+### Bug Fixes
+
+* update typescript to v5.8 ([7c9729a](https://github.com/DouglasNeuroInformatics/eslint-config/commit/7c9729abead820a684ffb5f79931cabfa9882ab4))
+
 ## [5.3.4](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.3...v5.3.4) (2025-05-09)
 
 ### Bug Fixes
