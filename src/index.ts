@@ -50,5 +50,5 @@ export const config = async (
     items.push(typescriptConfig({ fileRoots, react, svelte, typescript }));
   }
   items.push(...args);
-  return (await Promise.all(items)).flat();
+  return (await Promise.all(items.map(async (item) => await item))).flat();
 };

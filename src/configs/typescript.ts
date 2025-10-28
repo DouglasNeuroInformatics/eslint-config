@@ -20,7 +20,6 @@ export const typescriptConfig = async ({
     {
       files: filesFactory(files, fileRoots),
       languageOptions: {
-        // @ts-expect-error - ironic lol
         parser,
         parserOptions: {
           project: typescript.project ?? true,
@@ -28,7 +27,6 @@ export const typescriptConfig = async ({
         }
       },
       plugins: {
-        // @ts-expect-error - ironic lol
         '@typescript-eslint': plugin
       },
       rules: {
