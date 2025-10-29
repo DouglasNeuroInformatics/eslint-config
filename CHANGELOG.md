@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.3.7](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.6...v5.3.7) (2025-10-29)
+
+### Bug Fixes
+
+* typescript peer version ([ed7d2ff](https://github.com/DouglasNeuroInformatics/eslint-config/commit/ed7d2ff5519c622075bc88c86f4391554428e3c7))
+
 ## [5.3.6](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.5...v5.3.6) (2025-10-28)
 
 ### Bug Fixes
