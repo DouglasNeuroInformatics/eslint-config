@@ -42,7 +42,7 @@
   },
   "peerDependencies": {
     "eslint": "9.x",
-    "typescript": "5.8.x"
+    "typescript": "5.9.x"
   },
   "peerDependenciesMeta": {
     "typescript": {
