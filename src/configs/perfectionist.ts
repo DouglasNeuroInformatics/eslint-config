@@ -1,6 +1,5 @@
-import { filesFactory } from '../utils.js';
-
 import type { Config, Options } from '../types.js';
+import { filesFactory } from '../utils.js';
 
 export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoots'>): Promise<Config[]> => {
   const { default: perfectionistPlugin } = await import('eslint-plugin-perfectionist');
@@ -39,30 +38,30 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
         'perfectionist/sort-imports': [
           'error',
           {
-            customGroups: {
-              type: {
-                react: ['^react$', '^react-dom/.+'],
-                runtime: '^(?!.*.css$)/runtime/.+$'
+            customGroups: [
+              {
+                elementNamePattern: ['^react$', '^react-dom/.+'],
+                groupName: 'react'
               },
-              value: {
-                react: ['^react$', '^react-dom/.+'],
-                runtime: '^(?!.*.css$)/runtime/.+$'
+
+              {
+                elementNamePattern: '^(?!.*.css$)/runtime/.+$',
+                groupName: 'runtime'
               }
-            },
+            ],
             groups: [
               'runtime',
               'react',
-              ['builtin', 'builtin-type'],
-              ['external', 'external-type'],
-              ['internal', 'internal-type'],
+              'builtin',
+              'external',
+              'internal',
               ['index', 'sibling', 'parent'],
-              'type',
               'style',
               ['side-effect', 'side-effect-style'],
               'unknown'
             ],
             internalPattern: ['^@/.+', '^#.+'],
-            newlinesBetween: 'always',
+            newlinesBetween: 1,
             type: 'natural'
           }
         ],
@@ -82,10 +81,13 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
         'perfectionist/sort-jsx-props': [
           'error',
           {
-            customGroups: {
-              callback: '^on.+'
-            },
-            groups: ['shorthand', 'unknown', 'callback'],
+            customGroups: [
+              {
+                elementNamePattern: '^on.+',
+                groupName: 'callback'
+              }
+            ],
+            groups: ['shorthand-prop', 'unknown', 'callback'],
             order: 'asc',
             type: 'natural'
           }
