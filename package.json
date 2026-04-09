@@ -53,14 +53,14 @@
     "@eslint/js": "^10.0.1",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsdoc": "^50.6.11",
-    "eslint-plugin-jsonc": "^2.21.0",
+    "eslint-plugin-jsdoc": "^62.9.0",
+    "eslint-plugin-jsonc": "^3.1.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-perfectionist": "^5.8.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-svelte": "^2.46.1",
+    "eslint-plugin-svelte": "^3.17.0",
     "globals": "^17.4.0",
-    "jsonc-eslint-parser": "^2.4.0",
+    "jsonc-eslint-parser": "^3.1.0",
     "typescript-eslint": "^8.58.1"
   },
   "devDependencies": {

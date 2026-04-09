@@ -5,8 +5,9 @@ export const jsonConfig = async ({
   fileRoots,
   json
 }: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'json'>>): Promise<Config[]> => {
-  const { default: plugin } = await import('eslint-plugin-jsonc');
-  const { default: parser } = await import('jsonc-eslint-parser');
+  const plugin = await import('eslint-plugin-jsonc');
+  const parser = await import('jsonc-eslint-parser');
+
   const configs: Config[] = [];
   if (json.sort.packageJson) {
     configs.push({
@@ -15,7 +16,6 @@ export const jsonConfig = async ({
         parser
       },
       plugins: {
-        // @ts-expect-error - not updated for eslint v9
         jsonc: plugin
       },
       rules: {
@@ -102,7 +102,6 @@ export const jsonConfig = async ({
         parser
       },
       plugins: {
-        // @ts-expect-error - not updated for eslint v9
         jsonc: plugin
       },
       rules: {
