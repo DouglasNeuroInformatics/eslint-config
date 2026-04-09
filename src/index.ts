@@ -7,7 +7,6 @@ import { perfectionistConfig } from './configs/perfectionist.js';
 import { reactConfig } from './configs/react.js';
 import { svelteConfig } from './configs/svelte.js';
 import { typescriptConfig } from './configs/typescript.js';
-
 import type { Config, ConfigDef, Options } from './types.js';
 
 /** Create an array of eslint config objects based on the provided options */

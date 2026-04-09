@@ -1,6 +1,5 @@
-import { filesFactory } from '../utils.js';
-
 import type { Config, Options } from '../types.js';
+import { filesFactory } from '../utils.js';
 
 export const importConfig = async ({ fileRoots }: Pick<Options, 'fileRoots'>): Promise<Config[]> => {
   const { default: importPlugin } = await import('eslint-plugin-import');

@@ -1,6 +1,5 @@
-import { filesFactory } from '../utils.js';
-
 import type { Config, Options } from '../types.js';
+import { filesFactory } from '../utils.js';
 
 export const reactConfig = async ({
   fileRoots,

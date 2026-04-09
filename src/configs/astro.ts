@@ -1,6 +1,5 @@
-import { applyFilesFactory, filesFactory } from '../utils.js';
-
 import type { Config, Options } from '../types.js';
+import { applyFilesFactory, filesFactory } from '../utils.js';
 
 export const astroConfig = async ({ fileRoots }: Pick<Options, 'fileRoots'>): Promise<Config[]> => {
   const { default: astroPlugin } = await import('eslint-plugin-astro');
