@@ -1,7 +1,7 @@
 {
   "extends": ["@douglasneuroinformatics/tsconfig"],
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true
+    "types": ["node"]
   },
   "include": ["src/**/*", "typings/*.d.ts"]
 }
