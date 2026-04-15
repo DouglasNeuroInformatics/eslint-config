@@ -1,5 +1,15 @@
 # Changelog
 
+## [6.0.0](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.7...v6.0.0) (2026-04-15)
+
+### ⚠ BREAKING CHANGES
+
+* require typescript v6.0
+
+### Miscellaneous Chores
+
+* migrate to typescript v6 ([6e02022](https://github.com/DouglasNeuroInformatics/eslint-config/commit/6e02022d3ce735bcd11b5ecf1fe3685a7051325b))
+
 ## [5.3.7](https://github.com/DouglasNeuroInformatics/eslint-config/compare/v5.3.6...v5.3.7) (2025-10-29)
 
 ### Bug Fixes
