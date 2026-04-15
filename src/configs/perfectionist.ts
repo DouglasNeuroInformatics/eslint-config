@@ -39,30 +39,30 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
         'perfectionist/sort-imports': [
           'error',
           {
-            customGroups: {
-              type: {
-                react: ['^react$', '^react-dom/.+'],
-                runtime: '^(?!.*.css$)/runtime/.+$'
+            customGroups: [
+              {
+                elementNamePattern: '^(?!.*.css$)/runtime/.+$',
+                groupName: 'runtime'
               },
-              value: {
-                react: ['^react$', '^react-dom/.+'],
-                runtime: '^(?!.*.css$)/runtime/.+$'
+              {
+                elementNamePattern: ['^react$', '^react-dom/.+'],
+                groupName: 'react'
               }
-            },
+            ],
             groups: [
               'runtime',
               'react',
-              ['builtin', 'builtin-type'],
-              ['external', 'external-type'],
-              ['internal', 'internal-type'],
-              ['index', 'sibling', 'parent'],
-              'type',
+              ['value-builtin', 'type-builtin'],
+              ['value-external', 'type-external'],
+              ['value-internal', 'type-internal'],
+              ['value-index', 'value-sibling', 'value-parent'],
+              'type-import',
               'style',
               ['side-effect', 'side-effect-style'],
               'unknown'
             ],
             internalPattern: ['^@/.+', '^#.+'],
-            newlinesBetween: 'always',
+            newlinesBetween: 1,
             type: 'natural'
           }
         ],
@@ -82,10 +82,13 @@ export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoot
         'perfectionist/sort-jsx-props': [
           'error',
           {
-            customGroups: {
-              callback: '^on.+'
-            },
-            groups: ['shorthand', 'unknown', 'callback'],
+            customGroups: [
+              {
+                elementNamePattern: '^on.+',
+                groupName: 'callback'
+              }
+            ],
+            groups: ['shorthand-prop', 'unknown', 'callback'],
             order: 'asc',
             type: 'natural'
           }
