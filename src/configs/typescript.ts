@@ -1,13 +1,13 @@
 import { filesFactory } from '../utils.js';
 
-import type { Config, Options } from '../types.js';
+import type { Config, ResolvedOptions } from '../types.js';
 
 export const typescriptConfig = async ({
   fileRoots,
   react,
   svelte,
   typescript
-}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'react' | 'svelte' | 'typescript'>>): Promise<Config[]> => {
+}: Pick<ResolvedOptions, 'fileRoots' | 'react' | 'svelte' | 'typescript'>): Promise<Config[]> => {
   const { parser, plugin } = await import('typescript-eslint');
   const extensions = ['.ts', '.cts', '.mts'];
   if (react.enabled) {

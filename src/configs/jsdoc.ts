@@ -1,15 +1,17 @@
-import { filesFactory } from '../utils.js';
+import { filesFactory, scriptFiles } from '../utils.js';
 
-import type { Config, Options } from '../types.js';
+import type { Config, ResolvedOptions } from '../types.js';
 
 export const jsdocConfig = async ({
+  astro,
   fileRoots,
+  svelte,
   typescript
-}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'typescript'>>): Promise<Config[]> => {
+}: Pick<ResolvedOptions, 'astro' | 'fileRoots' | 'svelte' | 'typescript'>): Promise<Config[]> => {
   const { default: jsdoc } = await import('eslint-plugin-jsdoc');
   const configs: Config[] = [
     {
-      files: filesFactory(['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.tsx'], fileRoots),
+      files: filesFactory(scriptFiles({ astro, svelte }), fileRoots),
       plugins: {
         jsdoc
       },
@@ -47,8 +49,17 @@ export const jsdocConfig = async ({
     }
   ];
   if (typescript.enabled) {
+    // Astro frontmatter and Svelte script blocks are parsed as TypeScript, so they document types
+    // the same way a `.ts` file does
+    const typedFiles = ['**/*.ts', '**/*.tsx'];
+    if (astro.enabled) {
+      typedFiles.push('**/*.astro');
+    }
+    if (svelte.enabled) {
+      typedFiles.push('**/*.svelte');
+    }
     configs.push({
-      files: filesFactory(['**/*.ts', '**/*.tsx'], fileRoots),
+      files: filesFactory(typedFiles, fileRoots),
       rules: {
         'jsdoc/check-tag-names': [
           'warn',

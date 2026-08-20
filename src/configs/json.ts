@@ -1,11 +1,11 @@
 import { filesFactory } from '../utils.js';
 
-import type { Config, Options } from '../types.js';
+import type { Config, ResolvedOptions } from '../types.js';
 
 export const jsonConfig = async ({
   fileRoots,
   json
-}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'json'>>): Promise<Config[]> => {
+}: Pick<ResolvedOptions, 'fileRoots' | 'json'>): Promise<Config[]> => {
   const { default: plugin } = await import('eslint-plugin-jsonc');
   const { default: parser } = await import('jsonc-eslint-parser');
   const configs: Config[] = [];

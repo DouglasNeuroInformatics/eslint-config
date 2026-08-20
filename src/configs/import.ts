@@ -1,19 +1,30 @@
-import { filesFactory } from '../utils.js';
+import { filesFactory, scriptFiles } from '../utils.js';
 
-import type { Config, Options } from '../types.js';
+import type { Config, ResolvedOptions } from '../types.js';
 
-export const importConfig = async ({ fileRoots }: Pick<Options, 'fileRoots'>): Promise<Config[]> => {
+export const importConfig = async ({
+  astro,
+  fileRoots,
+  svelte
+}: Pick<ResolvedOptions, 'astro' | 'fileRoots' | 'svelte'>): Promise<Config[]> => {
   const { default: importPlugin } = await import('eslint-plugin-import');
   return [
     {
-      files: filesFactory(['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.tsx'], fileRoots),
+      files: filesFactory(scriptFiles({ astro, svelte }), fileRoots),
       plugins: {
         import: importPlugin
       },
       rules: {
         'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
-        'import/exports-last': 'error',
         'import/no-duplicates': 'error'
+      }
+    },
+    {
+      // Component files legitimately mix exports into the rest of their top-level code (e.g., an
+      // Astro `export const prerender`, or Svelte props), so this is limited to plain scripts
+      files: filesFactory(scriptFiles(), fileRoots),
+      rules: {
+        'import/exports-last': 'error'
       }
     }
   ];
