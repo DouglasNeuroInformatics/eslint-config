@@ -1,12 +1,12 @@
 import { filesFactory } from '../utils.js';
 
-import type { Config, Options } from '../types.js';
+import type { Config, ResolvedOptions } from '../types.js';
 
 export const reactConfig = async ({
   fileRoots,
   react,
   typescript
-}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'react' | 'typescript'>>): Promise<Config[]> => {
+}: Pick<ResolvedOptions, 'fileRoots' | 'react' | 'typescript'>): Promise<Config[]> => {
   const { default: jsxA11yPlugin } = await import('eslint-plugin-jsx-a11y');
   const { default: reactPlugin } = await import('eslint-plugin-react');
   return [

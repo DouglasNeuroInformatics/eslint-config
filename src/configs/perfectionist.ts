@@ -1,12 +1,16 @@
-import { filesFactory } from '../utils.js';
+import { filesFactory, scriptFiles } from '../utils.js';
 
-import type { Config, Options } from '../types.js';
+import type { Config, ResolvedOptions } from '../types.js';
 
-export const perfectionistConfig = async ({ fileRoots }: Pick<Options, 'fileRoots'>): Promise<Config[]> => {
+export const perfectionistConfig = async ({
+  astro,
+  fileRoots,
+  svelte
+}: Pick<ResolvedOptions, 'astro' | 'fileRoots' | 'svelte'>): Promise<Config[]> => {
   const { default: perfectionistPlugin } = await import('eslint-plugin-perfectionist');
   return [
     {
-      files: filesFactory(['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.tsx'], fileRoots),
+      files: filesFactory(scriptFiles({ astro, svelte }), fileRoots),
       plugins: {
         perfectionist: perfectionistPlugin
       },

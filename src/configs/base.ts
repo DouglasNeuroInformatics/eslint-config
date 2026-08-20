@@ -1,12 +1,14 @@
-import { filesFactory } from '../utils.js';
+import { filesFactory, scriptFiles } from '../utils.js';
 
-import type { Config, Options } from '../types.js';
+import type { Config, ResolvedOptions } from '../types.js';
 
 export const baseConfig = async ({
+  astro,
   env,
   exclude,
-  fileRoots
-}: Pick<Options, 'fileRoots'> & Required<Pick<Options, 'env' | 'exclude'>>): Promise<Config[]> => {
+  fileRoots,
+  svelte
+}: Pick<ResolvedOptions, 'astro' | 'env' | 'exclude' | 'fileRoots' | 'svelte'>): Promise<Config[]> => {
   const { default: js } = await import('@eslint/js');
   const { default: globals } = await import('globals');
   return [
@@ -14,7 +16,7 @@ export const baseConfig = async ({
       ignores: ['**/.astro/*', '**/build', '**/dist', '**/node_modules', '**/.svelte-kit', ...exclude]
     },
     {
-      files: filesFactory(['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.tsx'], fileRoots),
+      files: filesFactory(scriptFiles({ astro, svelte }), fileRoots),
       languageOptions: {
         ecmaVersion: 'latest',
         globals: {
